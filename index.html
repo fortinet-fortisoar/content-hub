@@ -66,16 +66,18 @@
     
         .progress-image-content {
             width: 60%;
+            height: 100%;
             float: right;
+            margin-top: 100px;
          }
     
         .progress-image {
             background: url('./inprogress_icon.png');
-            width: 120px;
-            height: 120px;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
             background-position: center;
-            background-size: cover;
-            margin-top: 50px;    
+            background-size: contain;
+            background-repeat: no-repeat;
         }
         
         
