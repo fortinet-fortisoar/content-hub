@@ -74,6 +74,24 @@
             font-size: 35px;
             margin: 10px;
         }
+    
+        .progress-content {
+            width: 40%;    
+         }
+    
+        .progress-image-content {
+            width: 60%;
+         }
+    
+        .progress-image {
+            background: url('./inprogress_icon.png');
+            width: 120px;
+            height: 120px;
+            background-position: center;
+            background-size: cover;
+            margin-top: 50px;    
+        }
+        
         
         @media screen and (max-width:640px) {
            
@@ -89,7 +107,7 @@
             font-size: 25px;
             margin: 10px;
         }
-        }
+        }to
         @media screen and (max-width:400px) {
             h1 {
             font-size: 30px;
@@ -99,10 +117,17 @@
 <body>
     <div class="background"></div>
     <div class="container">
-        <div class="top" style="margin-top: 150px;">
+        <div class="top">
             <h1>FortiSOAR<sup style="font-size: 15px;">TM</sup> Content Hub</h1>
         </div>
-        <div style="background: url('./inprogress_icon.png');width: 120px;height: 120px;background-position: center;background-size: cover;margin-top: 50px;"></div>
+        <div class="progress-content">
+            <h1>Content Hub</h1>
+            <h3>is getting prepared</h3>
+            <p>Content that is aimed to make your content, takes some time to craft. We appreciate your patience while we work to get this ready for you!</p>
+        </div>
+        <div class="progress-image-content">
+            <div class="progress-image"></div>
+        </div>
         <p style="margin-top: 30px;color: #ffffff;font-weight: 100;">Website Work In Progress</p>
     </div>
    
