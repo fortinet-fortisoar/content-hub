@@ -741,17 +741,20 @@ function buildCardHtml(listItem) {
   var itemVersionText = document.createTextNode(listItem.version);
   itemVersion.appendChild(itemVersionText);
   itemDetailsDiv.appendChild(itemVersion);
-
-  var itemPublisher = document.createElement('p');
-  itemPublisher.className = "m-0";
-  var itemPublisherTag = document.createElement('span');
-  itemPublisherTag.className = "text-black-50";
-  var itemPublisherTagText = document.createTextNode("Published By: ");
-  itemPublisherTag.appendChild(itemPublisherTagText);
-  itemPublisher.appendChild(itemPublisherTag);
-  var itemPublisherText = document.createTextNode(listItem.publisher);
-  itemPublisher.appendChild(itemPublisherText);
-  itemDetailsDiv.appendChild(itemPublisher);
+  
+  if(listItem.publisher){
+    var itemPublisher = document.createElement('p');
+    itemPublisher.className = "m-0";
+    var itemPublisherTag = document.createElement('span');
+    itemPublisherTag.className = "text-black-50";
+    var itemPublisherTagText = document.createTextNode("Published By: ");
+    itemPublisherTag.appendChild(itemPublisherTagText);
+    itemPublisher.appendChild(itemPublisherTag);
+    var itemPublisherText = document.createTextNode(listItem.publisher);
+    itemPublisher.appendChild(itemPublisherText);
+    itemDetailsDiv.appendChild(itemPublisher);
+  }
+  
   itemContentDiv.appendChild(itemDetailsDiv);
   aTaglistItem.appendChild(itemContentDiv);
 
