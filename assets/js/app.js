@@ -23,11 +23,16 @@ $(document).ready(function () {
     xmlHttp.open("GET", basePath + "assets/html/sidebar.html", false); // false for synchronous request
     xmlHttp.send(null);
     navBar.innerHTML = xmlHttp.responseText;
-    
-    xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
-    xmlHttp.send(null);
-    var allFiltersJson = xmlHttp.responseText;
+
+    if (!localStorage.hasOwnProperty('allFiltersJson')) {
+      xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
+      xmlHttp.send(null);
+      var allFilterJsonResponse = xmlHttp.responseText;
+      localStorage.setItem('allFiltersJson', allFilterJsonResponse);
+    }
+    var allFiltersJson = localStorage.getItem('allFiltersJson');
     allFiltersJson = JSON.parse(allFiltersJson);
+
     categoryList = allFiltersJson.category;
     publisherList = allFiltersJson.publisher;
     setTimeout(function () {
@@ -276,11 +281,16 @@ function resetAllCheckboxes(checkboxes){
 }
 
 function init() {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
-  xmlHttp.send(null);
-  var allItemsJson = xmlHttp.responseText;
+  if (!localStorage.hasOwnProperty('allItemsJson')) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
+    xmlHttp.send(null);
+    var allItemsJsonResponse = xmlHttp.responseText;
+    localStorage.setItem('allItemsJson', allItemsJsonResponse);
+  }
+  var allItemsJson = localStorage.getItem('allItemsJson');
   allItemsJson = JSON.parse(allItemsJson);
+  
   var updatesList = [];
   var updatesCount = 0;
   _.each(allItemsJson, function (item) {
