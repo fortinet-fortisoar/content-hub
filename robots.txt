@@ -1,9 +1,5 @@
 # Dont Block Googlebot
-User-agent: Googlebot
+User-agent: *
 Allow: /
-
-# Block Adsbot
-User-agent: AdsBot-Google
-Disallow: /
 
 Sitemap: https://fortisoar.contenthub.fortinet.com/index.html
