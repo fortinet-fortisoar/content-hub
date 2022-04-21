@@ -42,14 +42,10 @@
       if(detailInfo.availableVersions.length > 0){
         detailAvailableVersions.classList.remove("d-none");
         _.each(detailInfo.availableVersions, function(version) {
-          var versionTag = document.createElement('li');
+          var versionTag = document.createElement('a');
           versionTag.className = "btn btn-link dropdown-item rounded-0";
-          var buildNumber = version === detailInfo.version ? detailInfo.buildNumber : "latest";
-          if(version !== detailInfo.version) {
-            versionTag.onclick = function(){
-              getBuildNumber(detailInfo.name, version, detailInfo.type);
-            };
-          }
+          versionTag.setAttribute("href", basePath + "detail.html?entity=" + detailInfo.name + "&version=" + version + "&type=" + detailInfo.type);
+          versionTag.setAttribute("target", "_self");
           var versionText = document.createTextNode("Version - " + version);
           versionTag.append(versionText);
           detailAvailableVersions.append(versionTag);
@@ -82,7 +78,7 @@
       var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink.match(/readme.md/gi)){
         docLink = docLink.replace("github.com", "raw.githubusercontent.com");
-        docLink = docLink.replace("/blob", "");
+        docLink = docLink.replace("/blob/", "/");
         docLink = docLink.replace("/tree/", "/");
         var docContent = document.createElement('zero-md');
         docContent.setAttribute("src", docLink);
@@ -151,15 +147,6 @@
     http.open("GET", theUrl, true);
     http.send(null);
   };
-
-  function getBuildNumber(contentName, contentVersion, contentType){
-    var buildPath = yumRepo + "/content-hub/" + contentName + "-" + contentVersion + "/build.json";
-    httpGetAsync(buildPath, function(response){
-      var buildNumber = response.buildNumber;
-      contentName = encodeURIComponent(contentName);
-      window.location.href = basePath + "detail.html?entity=" + contentName + "&version=" + contentVersion + "&type=" + contentType + "&buildNumber=" + buildNumber;
-    });
-  }
 
   function navigateToContent(){
     window.location.href = "/list.html?contentType=all";
