@@ -195,6 +195,14 @@
   overflow: auto;
 }
 
+.filter-list-input::-webkit-scrollbar {
+  width: 5px;
+}
+
+.filter-list-input::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .global-search-input-sm{
   margin-left: 15px;
 }
