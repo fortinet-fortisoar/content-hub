@@ -1,6 +1,5 @@
 'use strict';
 
-  const http = new XMLHttpRequest();
   var yumRepo = 'https://repo.fortisoar.fortinet.com';
   var basePath = 'https://fortisoar.contenthub.fortinet.com/';
 
