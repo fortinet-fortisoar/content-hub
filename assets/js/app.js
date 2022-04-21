@@ -1,5 +1,7 @@
 'use strict';
 
+const http = new XMLHttpRequest();
+
 var yumRepo = 'https://repo.fortisoar.fortinet.com/';
 var basePath = 'https://fortisoar.contenthub.fortinet.com/';
 var listItems = [];
@@ -24,11 +26,15 @@ $(document).ready(function () {
     xmlHttp.send(null);
     navBar.innerHTML = xmlHttp.responseText;
 
-    xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
-    xmlHttp.send(null);
-    var allFiltersJson = xmlHttp.responseText;
+    if (!localStorage.hasOwnProperty('allFiltersJson')) {
+      xmlHttp.open("GET", yumRepo + "content-hub/content-hub-filters.json", false); // false for synchronous request
+      xmlHttp.send(null);
+      var allFilterJsonResponse = xmlHttp.responseText;
+      localStorage.setItem('allFiltersJson', allFilterJsonResponse);
+    }
+    var allFiltersJson = localStorage.getItem('allFiltersJson');
     allFiltersJson = JSON.parse(allFiltersJson);
-
+    
     categoryList = allFiltersJson.category;
     publisherList = allFiltersJson.publisher;
     setTimeout(function () {
@@ -58,23 +64,6 @@ $(document).ready(function () {
   }
   $('.dropdown-toggle').dropdown();
   $('.nav-tabs').tab();
-
-  setTimeout(function () {
-    if (window.location.href.indexOf('list.html') > -1) {
-      $('.list-loading').addClass('d-none');
-      $('.all-list-content').removeClass('d-none');
-    }
-  }, 1000);
-
-  var mainPageLoader = $('.main-loader');
-  if (mainPageLoader) {
-    setTimeout(function () {
-      $('.main-page-content').removeClass('d-none');
-      mainPageLoader.addClass('d-none');
-    }, 1200);
-    $('#carouselExampleCaptions').carousel({ interval: 5000 });
-    $('#carouselProductUpdates').carousel({ interval: 10000 });
-  }
 });
 
 function reloadURLParams(){
@@ -277,12 +266,34 @@ function resetAllCheckboxes(checkboxes){
 }
 
 function init() {
-  var xmlHttp = new XMLHttpRequest();
-  xmlHttp.open("GET", yumRepo + "content-hub/content-hub.json", false); // false for synchronous request
-  xmlHttp.send(null);
-  var allItemsJson = xmlHttp.responseText;
-  allItemsJson = JSON.parse(allItemsJson);
-  
+  var contentHubPath = yumRepo + "content-hub/content-hub-web.json";
+  var allItemsJson;
+  //Check headers last modified date
+  httpGetHeaderInfo(contentHubPath, function(response) {
+    console.log(response);
+    if (!localStorage.hasOwnProperty('allItemsJsonlastModifiedDate')) {
+      localStorage.setItem('allItemsJsonlastModifiedDate', response);
+    }
+    var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
+    
+    if(allItemsJsonlastModifiedDate === response && localStorage.hasOwnProperty('allItemsJson')){
+      allItemsJson = localStorage.getItem('allItemsJson');
+      allItemsJson = JSON.parse(allItemsJson);
+      updateContentOnPageLoad(allItemsJson);
+    } else {
+      var httpLoadContent = new XMLHttpRequest();
+      httpLoadContent.open("GET", contentHubPath, false); // false for synchronous request
+      httpLoadContent.send(null);
+      var allItemsJsonResponse = httpLoadContent.responseText;
+      localStorage.setItem('allItemsJson', allItemsJsonResponse);
+      allItemsJson = localStorage.getItem('allItemsJson');
+      allItemsJson = JSON.parse(allItemsJson);
+      updateContentOnPageLoad(allItemsJson);
+    }
+  });
+}
+
+function updateContentOnPageLoad(allItemsJson){
   var updatesList = [];
   var updatesCount = 0;
   _.each(allItemsJson, function (item) {
@@ -314,6 +325,23 @@ function init() {
     filterContent('all', true);
   }
   $("#totalContentCount").html(totalItems);
+  
+  var mainPageLoader = $('.main-loader');
+  if (mainPageLoader) {
+    setTimeout(function () {
+      $('.main-page-content').removeClass('d-none');
+      mainPageLoader.addClass('d-none');
+    }, 1200);
+    $('#carouselExampleCaptions').carousel({ interval: 5000 });
+    $('#carouselProductUpdates').carousel({ interval: 10000 });
+  }
+  
+  setTimeout(function () {
+    if (window.location.href.indexOf('list.html') > -1) {
+      $('.list-loading').addClass('d-none');
+      $('.all-list-content').removeClass('d-none');
+    }
+  }, 1000);
 }
 
 var initLoad = window.location.href.indexOf('connect.html') > -1 || window.location.href.indexOf('detail.html') > -1;
@@ -743,7 +771,7 @@ function buildCardHtml(listItem) {
   var itemVersionText = document.createTextNode(listItem.version);
   itemVersion.appendChild(itemVersionText);
   itemDetailsDiv.appendChild(itemVersion);
-  
+
   if(listItem.publisher){
     var itemPublisher = document.createElement('p');
     itemPublisher.className = "m-0";
@@ -810,4 +838,15 @@ function getUrlParameter(sParam) {
     }
   }
   return null;
+};
+
+function httpGetHeaderInfo(theUrl, callback){
+  http.open('HEAD', theUrl);
+  http.onreadystatechange = function() { 
+      if (http.readyState == 4 && http.status == 200) {
+        var lastModifiedDate = http.getResponseHeader("Last-Modified");
+        callback(lastModifiedDate);
+      }
+  }
+  http.send();
 };
