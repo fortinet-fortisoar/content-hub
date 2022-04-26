@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://fortisoar.contenthub.fortinet.com/index.html
+Sitemap: https://fortisoar.contenthub.fortinet.com/sitemap.xml
