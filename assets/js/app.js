@@ -270,7 +270,6 @@ function init() {
   var allItemsJson;
   //Check headers last modified date
   httpGetHeaderInfo(contentHubPath, function(response) {
-    console.log(response);
     localStorage.setItem('allItemsJsonlastModifiedDate', response);
     var allItemsJsonlastModifiedDate = localStorage.getItem('allItemsJsonlastModifiedDate');
     
