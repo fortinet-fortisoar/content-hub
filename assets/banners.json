@@ -3,7 +3,7 @@
     "subHeading": "FortiSOAR Content Hub is a collection of solution extensions that help you to derive more meaning from your FortiSOAR application",
     "description": "",
     "hyperLink": "/list.html?contentType=all",
-    "imagePath": "assets/images/main_banner_1.png",
+    "imagePath": "",
     "hyperLinkText": "Explore Content Hub",
     "backgroundColorType": "dark"
   },
@@ -12,50 +12,66 @@
     "subHeading": "A well-researched and community vetted solution pack to streamline and accelerate your SOAR journey.",
     "description": "",
     "hyperLink": "/detail.html?entity=sOARFramework&version=1.0.0&type=solutionpack",
-    "imagePath": "assets/images/main_banner_2.png",
+    "imagePath": "",
     "hyperLinkText": "Explore SOAR Framework Pack",
     "backgroundColorType": "dark"
   },
   {
     "heading": "Featured - Threat Intelligence Management Solution Pack",
-    "subHeading": "Allows you to imbibe and adapt to threat intel management workflows and best practices and build a threat intel fused incident investigation process",
+    "subHeading": "Allows you to imbibe and adapt to threat intel management workflows and best practices and build a threat intel fused incident investigation",
     "description": "",
     "hyperLink": "/detail.html?entity=threat-intel-management&version=1.0.0&type=solutionpack",
-    "imagePath": "assets/images/main_banner_3.png",
+    "imagePath": "",
     "hyperLinkText": "Explore Threat Intel Management Pack",
     "backgroundColorType": "dark"
   },
   {
     "heading": "Gartner Peer Insights Reviews",
-    "subHeading": "Many enterprise customers realize the power and effectiveness of FortiSOAR and have provided positive feedback on Gartner Peer Insights.",
+    "subHeading": "Many enterprise customers realize the power & effectiveness of FortiSOAR & have provided positive feedback on Gartner Peer Insights.",
     "description": "",
     "hyperLink": "https://www.gartner.com/reviews/market/security-orchestration-automation-and-response-solutions/vendor/fortinet/product/fortisoar",
-    "imagePath": "assets/images/main_banner.png",
+    "imagePath": "",
     "hyperLinkText": "View Reviews",
-    "backgroundColorType": "light"
+    "backgroundColorType": "dark"
   }],
 "updatesBanner": [{
-    "heading": "FortiSOAR Solution Highlights",
-    "subHeading": "FortiSOAR helps to streamline your SOC and empowering it to orchestrate and automate accelerated and informed threat responses.",
-    "description": "",
-    "hyperLink": "https://www.fortinet.com/content/dam/fortinet/assets/data-sheets/fortisoar.pdf",
-    "imagePath": "assets/images/updates_banner_1.png",
-    "hyperLinkText": "View Data Sheet"
+    "heading": "Ability to export threat feeds from FortiSOAR to FortiGate",
+    "subHeading": "Threat Intel Management",
+    "description": "The FortiSOAR's new Threat Intel Management Solution Pack brings the SOAR and TIM worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. Refer to the following video to witness how this integration greatly simplifies investigations by bringing in contextual threat intel.",
+    "hyperLink": "https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.0.1/docs/usage.md#example---export-a-csvs-specific-fields-to-fortigate",
+    "imagePath": "assets/images/product_updates_1.png",
+    "hyperLinkText": ""
   },
   {
-    "heading": "FortiSOAR Community - Technical Help and FAQs",
-    "subHeading": "Well curated and updated technical help and FAQs available for your reference.",
-    "description": "",
-    "hyperLink": "https://community.fortinet.com/t5/forums/searchpage/tab/message?searchString=fortisoar&from=0&sortby=post_time&orderBy=desc&pageNo=1&aggregations=%5B%5D&uid=8021d0dd-1517-11ec-b3e2-0242ac12000d&resultsPerPage=10&exactPhrase=&withOneOrMore=&withoutTheWords=&pageSize=10&language=en&state=2&suCaseCreate=false",
-    "imagePath": "assets/images/updates_banner_3.png",
-    "hyperLinkText": "Explore FAQs"
+    "heading": "Adding Blocks and Notes while designing Playbooks",
+    "subHeading": "Playbook Designer",
+    "description": "You can add blocks containing multiple playbook steps that achieve a logical group context in a logical workflow diagram.",
+    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/playbooks-guide/331279/introduction-to-playbooks#Adding_blocks_and_notes_in_the_playbook_designer",
+    "imagePath": "assets/images/product_updates_2.png",
+    "hyperLinkText": ""
   },
   {
-    "heading": "FortiSOAR Community – Forums, Updates and Interactions",
-    "subHeading": "Participate in community discussions, request a feature, tune in to product updates and much more",
+    "heading": "Monitoring FortiSOAR using FortiMonitor",
+    "subHeading": "Enhanced Monitoring",
+    "description": "From release 7.2.0 onwards, FortiSOAR has been integrated with FortiMonitor to enable monitoring including CPU, RAM, Disk monitoring, network card bandwidth, Nginx, PostgreSQL monitoring etc., of your FortiSOAR instances using FortiMonitor.",
+    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/administration-guide/253964/fortisoar-integration-with-fortimonitor",
+    "imagePath": "assets/images/product_updates_3.png",
+    "hyperLinkText": ""
+  },
+  {
+    "heading": "Queue and Shift Management using FortiSOAR",
+    "subHeading": "SOC Friendly SOAR",
+    "description": "Queues provide managers a view that answers questions like, 'what are my resources working on currently?', 'how many tasks are pending?', and 'do any tasks require reallocation?'",
+    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/user-guide/965289/queue-and-shift-management",
+    "imagePath": "assets/images/product_updates_4.png",
+    "hyperLinkText": ""
+  }],
+ "announcementBanner": [{
+    "heading": "Announcement",
+    "subHeading": "Announcing the general availability (GA) of FortiSOAR v7.2.2!",
     "description": "",
-    "hyperLink": "https://fusecommunity.fortinet.com/groups/community-home?CommunityKey=9f1420e8-e3c6-4535-8cae-3fa714da66d8",
-    "imagePath": "assets/images/updates_banner_2.png",
-    "hyperLinkText": "Explore Community"
+    "hyperLink": "https://www.fortinet.com/",
+    "imagePath": "",
+    "hyperLinkText": "Learn More"
   }]
 }
