@@ -1,7 +1,7 @@
 'use strict';
 
   var yumRepo = 'https://repo.fortisoar.fortinet.com';
-  var basePath = 'https://cybersponse-dev-corp.github.io/contenthub';
+  var basePath = 'https://fortisoar.contenthub.fortinet.com/';
 
   init();
 

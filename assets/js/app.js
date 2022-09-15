@@ -3,7 +3,7 @@
 const http = new XMLHttpRequest();
 
 var yumRepo = 'https://repo.fortisoar.fortinet.com/';
-var basePath = 'https://cybersponse-dev-corp.github.io/contenthub';
+var basePath = 'https://fortisoar.contenthub.fortinet.com/';
 var listItems = [];
 var listItemsBkp;
 var showContentTypeClearFilter = false;
