@@ -170,6 +170,7 @@
         }
       });
 
+      var gitDocLink = docLink;
       if(detailInfo.type === "solutionpack") {
         var contentsTabContent = document.getElementById("contents-tab-content");
         actionsTabLink.classList.add("d-none");
@@ -181,9 +182,9 @@
         contentCol.className = "col-md-12";
 
         if(docLink && docLink.match(/readme.md/gi)){
-          var gitDocLink = docLink;
           docLink = getGitRawDocLink(docLink);
           var baseDocLink = docLink.replace(/readme.md/gi, "");
+          var baseDocGitLink = gitDocLink.replace(/readme.md/gi, "");
 
           var httpLoadSPContentMD = new XMLHttpRequest();
           httpLoadSPContentMD.open("GET", baseDocLink + 'docs/contents.md', false);
@@ -193,6 +194,7 @@
           if(solutionPackContentMDResponse){
             solutionPackContentMDResponse = solutionPackContentMDResponse.replaceAll('[Home](../README.md)', '[GitHub](' + gitDocLink + ')');
             solutionPackContentMDResponse = solutionPackContentMDResponse.replaceAll('[Home](https://github.com/fortinet-fortisoar/', '[GitHub](https://github.com/fortinet-fortisoar/');
+            solutionPackContentMDResponse = solutionPackContentMDResponse.replaceAll("./", baseDocGitLink);
             contentCol.innerHTML = marked.parse(solutionPackContentMDResponse);
             contentsTabLink.classList.remove("d-none");
             contentsTab.classList.remove("d-none");
@@ -225,17 +227,16 @@
         contentsTabContent.append(contentRow);
       }
 
-      // var docLink = 'https://github.com/fortinet-fortisoar/solution-pack-phishing-email-response/blob/1.0.1-doc-changes/README.md';
       var docLinkBlock = document.getElementById("doc-content-block");
       if(docLink && docLink.match(/readme.md/gi)){
         docLink = getGitRawDocLink(docLink);
-        var baseDocLink = docLink.replace(/readme.md/gi, "");
+        var baseDocLink = gitDocLink.replace(/readme.md/gi, "");
         var httpLoadContent = new XMLHttpRequest();
         httpLoadContent.open("GET", docLink, false); // false for synchronous request
         httpLoadContent.send(null);
         var detailReadMeResponse = httpLoadContent.status !== 404 ? httpLoadContent.responseText : '';
         if(detailReadMeResponse !== ''){
-          detailReadMeResponse = detailReadMeResponse.replaceAll("./docs/", baseDocLink + "docs/");
+          detailReadMeResponse = detailReadMeResponse.replaceAll("./", baseDocLink);
 
           document.getElementById("detail-docs-content").innerHTML = marked.parse(detailReadMeResponse);
           $('.item-github-content').removeClass('d-none');
