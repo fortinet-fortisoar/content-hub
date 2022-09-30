@@ -1265,8 +1265,8 @@ function buildCardHtml(listItem, mode) {
 
   var cardDescription = createNewDomElement('p', 'mp-tile-description muted-80');
   listItem.description = listItem.description ? listItem.description : '';
-  var itemDescription = document.createTextNode(listItem.description);
-  cardDescription.setAttribute("title", listItem.description);
+  var tooltipDesc = listItem.description.replace(/(<([^>]+)>)/gi, "");
+  cardDescription.setAttribute("title", tooltipDesc);
   cardDescription.innerHTML = listItem.description;
   aTaglistItem.appendChild(cardDescription);
 
