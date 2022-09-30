@@ -1267,7 +1267,7 @@ function buildCardHtml(listItem, mode) {
   listItem.description = listItem.description ? listItem.description : '';
   var itemDescription = document.createTextNode(listItem.description);
   cardDescription.setAttribute("title", listItem.description);
-  cardDescription.appendChild(itemDescription);
+  cardDescription.innerHTML = listItem.description;
   aTaglistItem.appendChild(cardDescription);
 
   if(mode === 'updates'){
