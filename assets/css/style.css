@@ -1311,6 +1311,10 @@
   background-color: inherit !important;
 }
 
+.detail-container .markdown-body code {
+  color: inherit;	
+}
+
 .detail-container .content-box-styling {
   padding: 10px 30px;
   border-radius: 3px;
