@@ -236,8 +236,9 @@
         httpLoadContent.send(null);
         var detailReadMeResponse = httpLoadContent.status !== 404 ? httpLoadContent.responseText : '';
         if(detailReadMeResponse !== ''){
+          var baseGitDocLink = docLink.replace(/readme.md/gi, "");
+          detailReadMeResponse = detailReadMeResponse.replaceAll("./docs/res", baseGitDocLink + '/docs/res');
           detailReadMeResponse = detailReadMeResponse.replaceAll("./", baseDocLink);
-
           document.getElementById("detail-docs-content").innerHTML = marked.parse(detailReadMeResponse);
           $('.item-github-content').removeClass('d-none');
           docLinkBlock.classList.add("d-block");
