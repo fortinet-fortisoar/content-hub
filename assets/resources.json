@@ -23,6 +23,23 @@
         "Authentication"
       ],
       "certified": true,
+      "description": "A use case demonstration where using FortiSOAR's Notification Channel feature, manual input/decision is requested from a user through MS Teams solution and the input is used to influence the response orchestration workflow. Highlights are the ease of creating Notification Channels and assigning that delivery rules to and the efficient collaboration with external users (non FortiSOAR users) through Email, MS-Teams, Slack etc. mediums.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/5_29UDcBi7I",
+      "label": "External User Collaboration Using MS Teams",
+      "name": "",
+      "publishedDate": 1669108283,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
       "description": "In this video, we will be walking through how customers can use FortiSOAR to orchestrate their endpoint security. Solutions used in the demo are: FortiSOAR, FortiGate, FortiEDR, VMWare vSphere, Active Directory",
       "iconLarge": null,
       "infoPath": "https://www.youtube.com/embed/CzNxDLAMfBQ",
