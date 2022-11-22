@@ -42,7 +42,8 @@
 .icon-dashboard-border:before {
   content: "\e905";
 }
-.icon-howtos-type:before {
+.icon-howtos-type:before,
+.icon-demovideos-type:before {
   content: "\e906";
 }
 .icon-howtos:before {
