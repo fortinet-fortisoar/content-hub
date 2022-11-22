@@ -959,7 +959,9 @@
 }
 
 #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
-#featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container {
+#featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
+#latest-hub-updates .mp-tile-container.mp-tile-demovideos-container,
+#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container {
   background: url(../images/solutionpack_bg.png);
 }
 
@@ -974,7 +976,9 @@
 }
 
 #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
-#featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover {
+#featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
+#latest-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
+#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover {
   background: url(../images/solutionpack_bg.png), rgba(25, 28, 32, 0.53);
 }
 
@@ -990,7 +994,9 @@
 }
 
 .light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
-.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container {
+.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
+.light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-demovideos-container,
+.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-demovideos-container {
   background: url(../images/solutionpack_bg_light.png);
 }
 
@@ -1005,7 +1011,9 @@
 }
 
 .light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
-.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover  {
+.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
+.light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
+.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover  {
   background: url(../images/solutionpack_bg_light.png), rgba(0, 0, 0, 0.1);
 }
 
