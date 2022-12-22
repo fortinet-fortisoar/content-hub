@@ -184,7 +184,7 @@
         if(docLink && docLink.match(/readme.md/gi)){
           docLink = getGitRawDocLink(docLink);
           var baseDocLink = docLink.replace(/readme.md/gi, "");
-          var baseDocGitLink = gitDocLink.replace(/readme.md/gi, "");
+          var baseDocGitLink = gitDocLink.replace(/readme.md/gi, "docs/");
 
           var httpLoadSPContentMD = new XMLHttpRequest();
           httpLoadSPContentMD.open("GET", baseDocLink + 'docs/contents.md', false);
