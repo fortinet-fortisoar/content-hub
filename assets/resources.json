@@ -548,6 +548,23 @@
       "subType": "pdf",
       "icon": "fa-link",
       "subTypeTitle": "Case Study"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "A live demonstration of FortiSOAR's capabilities to ingest, prioritize, remediate and report vulnerabilities in OT/IT environments. In this demo, one can understand, how FortiSOAR ingests the CISA's ICS Advisories, automates the enrichment of CVEs using KEV catalogue (Known Exploitable Vulnerability), does Asset Correlations and raises an Alert if there is match found for Asset and a CVE having a Known Exploit. Further, it leverages the SSVC model for risk scoring of the Vulnerabilities and helps to orchestrate the process, leading to remediation recommendations/actions and Reporting.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/eZekKteZbLE",
+      "label": "Leveraging FortiSOAR For Vulnerability Management in OT/IT",
+      "name": "",
+      "publishedDate": 1679638721,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
     }
   ]
 }
