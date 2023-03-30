@@ -565,6 +565,23 @@
       "type": "demovideos",
       "version": "1.0.0",
       "subType": "video"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "A quick 5 min overview of how FortiSOAR adds value in the IT/OT Environments, helping in Risk-based Asset Management with Purdue Level Sensitivity, Orchestrated Alert Management with wide-array correlations and MITRE ATT&CK For ICS Based Response/Containment Recommendations. In addition, it provides out-of-the-box response Playbooks (with 500+ available integrations) to contain threats and allows for comprehensive Vulnerability Management, pulling in ICS Advisories and correlating Assets and KEV (Known Exploitable Vulnerabilities) info for empowering risk-based mitigations.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/-jZk7jmNo-o",
+      "label": "FortiSOAR For IT/OT Environments",
+      "name": "",
+      "publishedDate": 1680176540,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
     }
   ]
 }
