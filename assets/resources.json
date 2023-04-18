@@ -582,6 +582,23 @@
       "type": "demovideos",
       "version": "1.0.0",
       "subType": "video"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "In this scenario demonstration, we showcase, how a well integrated, out-of-the-box solution between FortiSOAR and FortiAnalyzer helps in responding to threats, efficiently and in-time. A practical use case is shown, where an alert from FAZ is enriched in FortiSOAR using threat intelligence and machine learning inputs. Next, the affected asset is isolated in FortiEMS post an approval received from the SOC admin on Slack. Once the machine is cleaned up, its shown how it can be quickly brought back up. FortiSOAR comprehensively integrates with all the Fortinet Fabric solutions, also allowing you to leverage 500+ other third-party security product integrations to design your response regime effectively and easily.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/etWghPmIuCg",
+      "label": "Using FortiSOAR For Mitigating Threats Detected By FortiAnalyzer",
+      "name": "",
+      "publishedDate": 1681822775,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
     }
   ]
 }
