@@ -961,7 +961,9 @@
 #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
 #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container,
 #latest-hub-updates .mp-tile-container.mp-tile-demovideos-container,
-#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container {
+#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container,
+#latest-hub-updates .mp-tile-container.mp-tile-datasheet-container,
+#featured-hub-updates .mp-tile-container.mp-tile-datasheet-container {
   background: url(../images/solutionpack_bg.png);
 }
 
@@ -978,7 +980,9 @@
 #latest-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
 #featured-hub-updates .mp-tile-container.mp-tile-solutionpack-container:hover,
 #latest-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
-#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover {
+#featured-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
+#latest-hub-updates .mp-tile-container.mp-tile-datasheet-container:hover,
+#featured-hub-updates .mp-tile-container.mp-tile-datasheet-container:hover {
   background: url(../images/solutionpack_bg.png), rgba(25, 28, 32, 0.53);
 }
 
@@ -1122,7 +1126,12 @@
 .icon-demovideos-border,
 .icon-demovideos,
 .icon-demovideos-large,
-.mp-tile-demovideos-container .btn-link {
+.mp-tile-demovideos-container .btn-link,
+.icon-datasheet-type,
+.icon-datasheet-border,
+.icon-datasheet,
+.icon-datasheet-large,
+.mp-tile-datasheet-container .btn-link {
   color: #41c9d7;
 }
 
