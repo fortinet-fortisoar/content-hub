@@ -606,7 +606,7 @@
         "Authentication"
       ],
       "certified": true,
-      "description": "FortiSOAR + Azure Integration Brief",
+      "description": "FortiSOAR Azure Integration Brief",
       "iconLarge": null,
       "infoPath": "https://repo.fortisoar.fortinet.com/content-hub/integration-brief/fortisoar+azure-integration-brief.pdf",
       "label": "FortiSOAR Integration Brief",
