@@ -43,7 +43,8 @@
   content: "\e905";
 }
 .icon-howtos-type:before,
-.icon-demovideos-type:before {
+.icon-demovideos-type:before,
+.icon-datasheet-type:before {
   content: "\e906";
 }
 .icon-howtos:before {
@@ -137,7 +138,8 @@
   content: "\e929";
 }
 .icon-howtos-large:before,
-.icon-demovideos-large:before {
+.icon-demovideos-large:before,
+.icon-datasheet-large:before {
   content: "\e91d";
 }
 .icon-verified:before {
