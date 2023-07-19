@@ -599,6 +599,25 @@
       "type": "demovideos",
       "version": "1.0.0",
       "subType": "video"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "FortiSOAR + Azure Integration Brief",
+      "iconLarge": null,
+      "infoPath": "https://repo.fortisoar.fortinet.com/content-hub/integration-brief/fortisoar+azure-integration-brief.pdf",
+      "label": "FortiSOAR Integration Brief",
+      "name": "",
+      "publishedDate": 1689703134,
+      "publisher": "Fortinet",
+      "type": "datasheet",
+      "version": "1.0.0",
+      "subType": "pdf",
+      "icon": "fa-file-pdf-o",
+      "subTypeTitle": "Integration Brief"
     }
   ]
 }
