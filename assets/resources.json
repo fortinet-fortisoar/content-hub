@@ -618,6 +618,40 @@
       "subType": "pdf",
       "icon": "fa-file-pdf-o",
       "subTypeTitle": "Integration Brief"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "The FortiSOAR platform enables the automation of repetitive tasks. In the scenario of a HIPAA breach, the platform has the capability to automatically trigger workflows that lead incident response team members through a sequence of actions. This video provides a comprehensive overview of the process.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/nhBeDDb9hXQ",
+      "label": "HIPPA Breach Notification Reporting & Investigation using FortiSOAR",
+      "name": "",
+      "publishedDate": 1699259271,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
+    },
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "The FortiSOAR 'Typosquat Alert Investigation' Solution Pack streamlines brand impersonation alerting and investigation of typo squatted domains.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/etWghPmIuCg",
+      "label": "Typosquat Alert Investigation",
+      "name": "",
+      "publishedDate": 1699259271,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
     }
   ]
 }
