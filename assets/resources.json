@@ -653,5 +653,22 @@
       "version": "1.0.0",
       "subType": "video"
     }
+    {
+      "buildNumber": 0,
+      "category": [
+        "Authentication"
+      ],
+      "certified": true,
+      "description": "Integration Of NETSCOUT AED v1.0.0 with FortiSOAR.",
+      "iconLarge": null,
+      "infoPath": "https://www.youtube.com/embed/UpQxBqXU-ZY",
+      "label": "Integration Of NETSCOUT AED with FortiSOAR",
+      "name": "",
+      "publishedDate": 1701932890,
+      "publisher": "Fortinet",
+      "type": "demovideos",
+      "version": "1.0.0",
+      "subType": "video"
+    }
   ]
 }
