@@ -35,35 +35,35 @@
     "backgroundColorType": "dark"
   }],
 "updatesBanner": [{
-    "heading": "Ability to export threat feeds from FortiSOAR to FortiGate",
-    "subHeading": "Threat Intel Management",
-    "description": "The FortiSOAR's new Threat Intel Management Solution Pack brings the SOAR and TIM worlds closer by introducing advanced Threat Intel Management capabilities within the SOAR platform. Refer to the following video to witness how this integration greatly simplifies investigations by bringing in contextual threat intel.",
-    "hyperLink": "https://github.com/fortinet-fortisoar/solution-pack-threat-intel-management/blob/release/1.0.1/docs/usage.md#example---export-a-csvs-specific-fields-to-fortigate",
-    "imagePath": "assets/images/product_updates_1.png",
+    "heading": "FortiSOAR v7.4.3: Introducing Fortinet Advisor for AI-Enhanced Security Orchestration",
+    "subHeading": "Artificial Intelligence",
+    "description": "FortiSOAR has unveiled its latest release, version 7.4.3, featuring groundbreaking innovations aimed at enhancing user experience and efficiency. One notable introduction is the Fortinet Advisor, currently in its preview version, serving as an AI assistant tailored for FortiSOAR users and compatible with version 7.4.3 and later.",
+    "hyperLink": "https://community.fortinet.com/t5/FortiSOAR-Announcements/FortiSOAR-v7-4-3-Introducing-Fortinet-Advisor-for-AI-Enhanced/ta-p/289240",
+    "imagePath": "assets/images/product_updates_01.png",
     "hyperLinkText": ""
   },
   {
-    "heading": "Adding Blocks and Notes while designing Playbooks",
-    "subHeading": "Playbook Designer",
-    "description": "You can add blocks containing multiple playbook steps that achieve a logical group context in a logical workflow diagram.",
-    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/playbooks-guide/331279/introduction-to-playbooks#Adding_blocks_and_notes_in_the_playbook_designer",
-    "imagePath": "assets/images/product_updates_2.png",
+    "heading": "FortiSOAR Outbreak Response Framework Overview",
+    "subHeading": "Zero Day Exploit",
+    "description": "A new FortiGuard Outbreak Detection Service is now available through FortiSOAR™'s Outbreak Response Framework Solution Pack.",
+    "hyperLink": "https://community.fortinet.com/t5/FortiSOAR-Discussions/FortiSOAR-Outbreak-Response-Framework-Overview/td-p/285701",
+    "imagePath": "assets/images/product_updates_02.png",
     "hyperLinkText": ""
   },
   {
-    "heading": "Monitoring FortiSOAR using FortiMonitor",
-    "subHeading": "Enhanced Monitoring",
-    "description": "From release 7.2.0 onwards, FortiSOAR has been integrated with FortiMonitor to enable monitoring including CPU, RAM, Disk monitoring, network card bandwidth, Nginx, PostgreSQL monitoring etc., of your FortiSOAR instances using FortiMonitor.",
-    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/administration-guide/253964/fortisoar-integration-with-fortimonitor",
-    "imagePath": "assets/images/product_updates_3.png",
+    "heading": "FortiSOAR Rapid Development Kit v2.0.0 Release Announcement",
+    "subHeading": "Facilitating Community Submission",
+    "description": "We are delighted to introduce FortiSOAR Rapid Development Kit (RDK) Version 2.0.0, bringing a myriad of user-centric enhancements to empower your journey in creating seamless third-party integrations and utility code snippets for FortiSOAR.",
+    "hyperLink": "https://community.fortinet.com/t5/FortiSOAR-Discussions/FortiSOAR-Rapid-Development-Kit-v2-0-0-Release-Announcement/td-p/291179",
+    "imagePath": "assets/images/product_updates_03.png",
     "hyperLinkText": ""
   },
   {
-    "heading": "Queue and Shift Management using FortiSOAR",
-    "subHeading": "SOC Friendly SOAR",
-    "description": "Queues provide managers a view that answers questions like, 'what are my resources working on currently?', 'how many tasks are pending?', and 'do any tasks require reallocation?'",
-    "hyperLink": "https://docs.fortinet.com/document/fortisoar/7.2.2/user-guide/965289/queue-and-shift-management",
-    "imagePath": "assets/images/product_updates_4.png",
+    "heading": "Optimizing Memory Usage: Streamlining Indicator Handling for Efficient Alert Linking",
+    "subHeading": "Optimizing Memory Usage",
+    "description": "One of the prevalent issues faced by security systems is the strain on memory caused by an excessive number of indicators.",
+    "hyperLink": "https://community.fortinet.com/t5/FortiSOAR-Discussions/Optimizing-Memory-Usage-Streamlining-Indicator-Handling-for/td-p/294964",
+    "imagePath": "assets/images/product_updates_04.png",
     "hyperLinkText": ""
   }],
  "announcementBanner": [{
