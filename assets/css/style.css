@@ -1021,7 +1021,7 @@
 .light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
 .light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-demovideos-container:hover,
 .light-theme-applied #latest-hub-updates .mp-tile-container.mp-tile-datasheet-container:hover,
-.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-datasheet-container:hover  {
+.light-theme-applied #featured-hub-updates .mp-tile-container.mp-tile-datasheet-container:hover {
   background: url(../images/solutionpack_bg_light.png), rgba(0, 0, 0, 0.1);
 }
 
@@ -1330,6 +1330,14 @@
 #contents-tab-content.markdown-body table tr,
 #contents-tab-content.markdown-body table th{
   background-color: inherit !important;
+}
+
+.light-theme-applied .markdown-body pre{
+  background-color: #f6f8fa !important;
+}
+
+.markdown-body pre{
+  background-color: #161b22 !important;
 }
 
 .detail-container .markdown-body code {
