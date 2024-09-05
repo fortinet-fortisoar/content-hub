@@ -6,11 +6,16 @@
   init();
 
   function init() {
+    var allItemsJson = localStorage.getItem('allItemsJson');
+    allItemsJson = JSON.parse(allItemsJson);
     var detailInfo;
     var detailType = getUrlParameter('type');
     var detailName = getUrlParameter('entity');
     detailName = decodeURIComponent(detailName);
     var detailVersion = getUrlParameter('version');
+    if(!detailVersion){
+      detailVersion = allItemsJson.filter((item)=> item.name === detailName && item.type === detailType)[0]['version'];
+    }
     var detailBuildNumber = getUrlParameter('buildNumber');
     detailBuildNumber = detailBuildNumber ? detailBuildNumber : 'latest';
     var infoPath = "/content-hub/" + detailName + "-" + detailVersion + "/" + detailBuildNumber;
@@ -152,8 +157,6 @@
       httpGetAsync(depsPath, function(response) {
         if(response){
           document.getElementById("detail-deps-container").classList.remove("d-none");
-          var allItemsJson = localStorage.getItem('allItemsJson');
-          allItemsJson = JSON.parse(allItemsJson);
           var dependentSolutionPacks = createNewDomElement('div', 'row');
           if(response.dependentSolutionPacks.length > 3){
             $('#show-all-deps').removeClass('d-none');
